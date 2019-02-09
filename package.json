@@ -1,0 +1,12 @@
+{
+  "name": "music-faker",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.16.0",
+    "path": "^0.12.7"
+  }
+}
