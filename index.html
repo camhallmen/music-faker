@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Music Faker</title>
 </head>
@@ -109,14 +110,14 @@
               </div>
             </div>
             <div class="col-8">
-              <div class="jumbotron">
+              <div class="jumbotron container-fluid">
                   <!-- Wavesurfer -->
-              <div id="lead-form" class="waveform-tracks">Lead One</div>
+              <div id="lead-form" class="waveform-tracks lead-tracks">Lead One</div>
+              <div id="lead-form2" class="waveform-tracks lead-tracks">Lead Two</div>
               <div id="rhythm-form" class="waveform-tracks">Rhythm One</div>
+              <div id="rhythm-form2" class="waveform-tracks">Rhythm Two</div>
               <div id="drum-form" class="waveform-tracks">Drums One</div>
-              <!-- <div id="lead-form2"></div>
-              <div id="rhythm-form2"></div>
-              <div id="drum-form2"></div> -->
+              <div id="drum-form2" class="waveform-tracks">Drums Two</div>
               <div class='parent-component'></div>
               </div>
             </div>
@@ -124,23 +125,38 @@
               <div class="jumbotron-fluid">
                 <h5 class="column-hdr">Options</h5>
                 <!-- Lead Volume -->
+                <div class="option-container">
                 <div class="master-volume-text">Lead</div>
                 <input type="range" min="0" max="100" value="100" class="slider" id="lead-volume">
+                <button class="mute-btn" id="mute-lead">Mute</button>
+                <button class="delete-btn" id="delete-lead">Delete</button>
+                </div>
                 <br>
                 <!-- Rhythm Volume -->
+                <div class="option-container">
                 <div class="master-volume-text">Rhythm</div>
                 <input type="range" min="0" max="100" value="100" class="slider" id="rhythm-volume">
+                <button class="mute-btn" id="mute-rhythm">Mute</button>
+                <button class="delete-btn" id="delete-rhythm">Delete</button>
+                </div>
                 <br>
                 <!-- Drums Volume -->
+                <div class="option-container">
                 <div class="master-volume-text">Drums</div>
                 <input type="range" min="0" max="100" value="100" class="slider" id="drums-volume">
+                <button class="mute-btn" id="mute-drums">Mute</button>
+                <button class="delete-btn" id="delete-drums">Delete</button>
+                </div>
+                <br>
                 <br>
                 <!-- Choose Wave Color -->
                 <form>
+                    <div class="color-container">
                     <div class="master-volume-text">Choose the Wave Color!</div>
-                    <input type="text" name="wave-color" id="wave-color" class="slider">
+                    </div>
+                    <input type="text" name="wave-color" value="Red" id="wave-color" class="slider color-box">
                 </form>
-                <button id="choose-color" class="slider">Select</button>
+                <button id="choose-color" class="slider color-box">Select</button>
               </div>
             </div>
           </div>
@@ -150,8 +166,9 @@
       <!-- Master Volume -->
       <div class="slidecontainer">
             <br>
-            <div class="master-volume-text">Master Volume </div>
+            <div class="master-volume-text color-container">Master Volume
             <input type="range" min="0" max="100" value="100" class="slider" id="master-volume">
+            </div>
         </div>
 
       <!-- Play Buttons -->
