@@ -1,0 +1,117 @@
+header {
+    color: white;
+}
+
+.fa {
+    font-size: 48px;
+}
+
+#column1 {
+    background-color: black;
+}
+
+#column2 {
+    background-color: blue;
+    font-size: 48px;
+}
+
+.jumbotron {
+    background-color: white;
+    height: 70vh;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.jumbotron-fluid {
+    height: 70vh;
+    /*background-color: blue;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;*/
+}
+
+.column-hdr {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px 0px;
+    margin-bottom: 0px;
+}
+
+.dropdown-item {
+    font-weight: bold;
+}
+
+#dropdown {
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.wrapper {
+    font-family: 'Sarabun', sans-serif;
+
+    background: 
+      radial-gradient(black 15%, transparent 16%) 0 0,
+      radial-gradient(black 15%, transparent 16%) 8px 8px,
+      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+
+    background-color:#282828;
+    background-size:16px 16px;
+}
+
+#column3 {
+    background-color: black;
+}
+
+#column4 {
+    background-color: blue;
+    font-size: 12px;
+}
+
+#fuck {
+    color: green;
+}
+
+.panel {
+    text-align: center;
+}
+
+.panel-btn {
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 40px;
+    cursor: pointer;
+    border-radius: 20%;
+    opacity: 0.7;
+}
+
+.panel-btn:hover {
+    opacity: 1;
+}
+
+#controls {
+    width: 75%;
+}
+
+.slidecontainer {
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.slider {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.slider:hover {
+    opacity: 1;
+  }
+
+#master-volume-text {
+    color: white;
+    text-align: center;
+}

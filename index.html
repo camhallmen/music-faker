@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Music Faker</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+    <!-- Header -->
+    <header>
+        <div class="container-fluid">
+        <div class="row">
+          <div class="col-2" id="column1">
+          <table class="table-sm table-borderless mx-auto">
+            <tbody>
+              <tr>
+                <td><i class="fa fa-user-circle-o"></td>
+              </tr>
+              <tr>
+                <td class="py-0">
+                  <strong>Avatar</strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="col-10" id="column2">
+            <strong>&#119070; Music Faker</strong>
+          </div>
+        </div>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main>
+        <div class="container-fluid">
+          <div class="row mt-5">
+            <div class="col-2">
+              <div class="jumbotron-fluid">
+                <h5 class="column-hdr">Tracks</h5>
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Lead Guitar
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a id="poppunklead1" class="dropdown-item" href="#">Pop-Punk Lead One</a>
+                <a id="poppunklead2" class="dropdown-item" href="#">Pop-Punk Lead Two</a>
+                <a class="dropdown-item" href="#">Track 3</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Rhythm Guitar
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a id="poppunkrhythm1" class="dropdown-item" href="#">Pop-Punk Rhythm One</a>
+                <a id="poppunkrhythm2" class="dropdown-item" href="#">Pop-Punk Rhythm Two</a>
+                <a class="dropdown-item" href="#">Track 3</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Bass Guitar
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Track 1</a>
+                <a class="dropdown-item" href="#">Track 2</a>
+                <a class="dropdown-item" href="#">Track 3</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Drums
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a id="poppunkdrums1" class="dropdown-item" href="#">Pop-Punk Drums One</a>
+                <a id="poppunkdrums2" class="dropdown-item" href="#">Pop-Punk Drums Two</a>
+                <a class="dropdown-item" href="#">Track 3</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Keyboards/Synth
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Track 1</a>
+                <a class="dropdown-item" href="#">Track 2</a>
+                <a class="dropdown-item" href="#">Track 3</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Vocals
+                </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/">Track 1</a>
+                <a class="dropdown-item" href="/">Track 2</a>
+                <a class="dropdown-item" href="/">Track 3</a>
+              </div>
+              </div>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="jumbotron">
+                  <!-- Wavesurfer -->
+              <div id="lead-form"></div>
+              <div id="rhythm-form"></div>
+              <div id="drum-form"></div>
+              <div id="lead-form2"></div>
+              <div id="rhythm-form2"></div>
+              <div id="drum-form2"></div>
+              <div class='parent-component'></div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="jumbotron-fluid">
+                <h5 class="column-hdr">Options</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Master Volume -->
+      <div class="slidecontainer">
+            <br>
+            <div id="master-volume-text">Master Volume </div>
+            <input type="range" min="0" max="100" value="100" class="slider" id="master-volume">
+        </div>
+
+      <!-- Play Buttons -->
+      <main>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                  <table class="table-sm table-borderless mx-auto" id="controls">
+                    <tbody>
+                      <tr>
+                        <td colSpan="3">
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td class="panel">
+                            <!-- Rewind -->
+                          <button id="rewind" class="panel-btn"><i class="fa fa-backward"></i></button>
+                        </td>
+                        <td class="panel">
+                            <!-- Play -->
+                          <button id="play" class="panel-btn"><i class="fa fa-play"></i></button>
+                        </td>
+                        <td class="panel">
+                            <!-- Fast Forward -->
+                          <button id="fast-forward" class="panel-btn"><i class="fa fa-forward"></i></button>
+                        </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+              </div>
+            <div class="col-2"></div>
+          </main>
+
+      <!-- Footer -->
+      <header>
+        <div class="container-fluid">
+        <div class="row">
+          <div class="col-2" id="column3"></div>
+          <div class="col-10" id="column4">
+            <p></p>
+            <p>&#xa9; Throwing Bows Media 2019. All rights reserved.</p>
+          </div>
+        </div>
+        </div>
+      </header>
+
+      </div>
+
+
+
+      <!-- Links -->
+
+      <!-- Bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+      <!-- Firebase -->
+      <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+
+      <script>
+      // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyAKwqj7NxWYPMa7uyK14T3HHC84I37uTfg",
+        authDomain: "mf-test-bafa6.firebaseapp.com",
+        databaseURL: "https://mf-test-bafa6.firebaseio.com",
+        projectId: "mf-test-bafa6",
+        storageBucket: "mf-test-bafa6.appspot.com",
+        messagingSenderId: "924961467216"
+      };
+        firebase.initializeApp(config);
+      </script>
+
+      <!-- Jquery -->
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+      </script>
+
+      <!-- Wavesurfer -->
+      <script src="https://unpkg.com/wavesurfer.js"></script>
+
+      <!-- Link to my js -->
+      <script src="app.js"></script>
+
+</body>
+</html>
