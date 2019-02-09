@@ -142,7 +142,7 @@ header {
 }
 
 #lead-mute-btn:hover {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 #rhythm-mute-btn {
@@ -155,7 +155,7 @@ header {
 }
 
 #rhythm-mute-btn:hover {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 #drums-mute-btn {
@@ -168,7 +168,7 @@ header {
 }
 
 #drums-mute-btn:hover {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .delete-btn {

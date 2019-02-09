@@ -35,6 +35,7 @@ var drumSurferTwo = WaveSurfer.create({
     progressColor: 'green',
 });
 
+// Load Tracks
 $("#poppunklead1").on("click", function() {
     var choice = prompt("Section 1 or 2?")
     if (choice === "1") {
