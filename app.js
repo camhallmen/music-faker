@@ -17,23 +17,23 @@ var drumSurfer = WaveSurfer.create({
     progressColor: 'green',
 });
 
-var leadSurferTwo = WaveSurfer.create({
-    container: '#lead-form2',
-    waveColor: 'blue',
-    progressColor: 'green',
-});
+// var leadSurferTwo = WaveSurfer.create({
+//     container: '#lead-form2',
+//     waveColor: 'blue',
+//     progressColor: 'green',
+// });
 
-var rhythmSurferTwo = WaveSurfer.create({
-    container: '#rhythm-form2',
-    waveColor: 'blue',
-    progressColor: 'green',
-});
+// var rhythmSurferTwo = WaveSurfer.create({
+//     container: '#rhythm-form2',
+//     waveColor: 'blue',
+//     progressColor: 'green',
+// });
 
-var drumSurferTwo = WaveSurfer.create({
-    container: '#drum-form2',
-    waveColor: 'blue',
-    progressColor: 'green',
-});
+// var drumSurferTwo = WaveSurfer.create({
+//     container: '#drum-form2',
+//     waveColor: 'blue',
+//     progressColor: 'green',
+// });
 
 $("#poppunklead1").on("click", function() {
     leadSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunklead1.mp3?alt=media&token=385fd824-7b23-4651-8d15-71ce0755480f")
@@ -87,9 +87,40 @@ $("#master-volume").on("change", function() {
     var rangeValue = $("#master-volume").val()
     newVolume = rangeValue/100
     leadSurfer.setVolume(newVolume)
-    leadSurferTwo.setVolume(newVolume)
+    // leadSurferTwo.setVolume(newVolume)
     rhythmSurfer.setVolume(newVolume)
-    rhythmSurferTwo.setVolume(newVolume)
+    // rhythmSurferTwo.setVolume(newVolume)
     drumSurfer.setVolume(newVolume)
-    drumSurferTwo.setVolume(newVolume)
+    // drumSurferTwo.setVolume(newVolume)
+})
+
+// Set individual track volume
+$("#lead-volume").on("change", function() {
+    var rangeValue = $("#lead-volume").val()
+    newVolume = rangeValue/100
+    leadSurfer.setVolume(newVolume)
+    // leadSurferTwo.setVolume(newVolume)
+})
+
+$("#rhythm-volume").on("change", function() {
+    var rangeValue = $("#rhythm-volume").val()
+    newVolume = rangeValue/100
+    rhythmSurfer.setVolume(newVolume)
+    // leadSurferTwo.setVolume(newVolume)
+})
+
+$("#drums-volume").on("change", function() {
+    var rangeValue = $("#drums-volume").val()
+    newVolume = rangeValue/100
+    drumSurfer.setVolume(newVolume)
+    // leadSurferTwo.setVolume(newVolume)
+})
+
+// Choose wave color
+$("#choose-color").on("click", function() {
+    var waveColor = $("#wave-color").val()
+    console.log(waveColor)
+    leadSurfer.setWaveColor(waveColor)
+    rhythmSurfer.setWaveColor(waveColor)
+    drumSurfer.setWaveColor(waveColor)
 })

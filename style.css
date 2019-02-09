@@ -111,7 +111,12 @@ header {
     opacity: 1;
   }
 
-#master-volume-text {
+.master-volume-text {
     color: white;
     text-align: center;
+}
+
+.waveform-tracks {
+    text-align: center;
+    text-decoration: underline;
 }

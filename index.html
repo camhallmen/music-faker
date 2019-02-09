@@ -111,18 +111,36 @@
             <div class="col-8">
               <div class="jumbotron">
                   <!-- Wavesurfer -->
-              <div id="lead-form"></div>
-              <div id="rhythm-form"></div>
-              <div id="drum-form"></div>
-              <div id="lead-form2"></div>
+              <div id="lead-form" class="waveform-tracks">Lead One</div>
+              <div id="rhythm-form" class="waveform-tracks">Rhythm One</div>
+              <div id="drum-form" class="waveform-tracks">Drums One</div>
+              <!-- <div id="lead-form2"></div>
               <div id="rhythm-form2"></div>
-              <div id="drum-form2"></div>
+              <div id="drum-form2"></div> -->
               <div class='parent-component'></div>
               </div>
             </div>
             <div class="col-2">
               <div class="jumbotron-fluid">
                 <h5 class="column-hdr">Options</h5>
+                <!-- Lead Volume -->
+                <div class="master-volume-text">Lead</div>
+                <input type="range" min="0" max="100" value="100" class="slider" id="lead-volume">
+                <br>
+                <!-- Rhythm Volume -->
+                <div class="master-volume-text">Rhythm</div>
+                <input type="range" min="0" max="100" value="100" class="slider" id="rhythm-volume">
+                <br>
+                <!-- Drums Volume -->
+                <div class="master-volume-text">Drums</div>
+                <input type="range" min="0" max="100" value="100" class="slider" id="drums-volume">
+                <br>
+                <!-- Choose Wave Color -->
+                <form>
+                    <div class="master-volume-text">Choose the Wave Color!</div>
+                    <input type="text" name="wave-color" id="wave-color" class="slider">
+                </form>
+                <button id="choose-color" class="slider">Select</button>
               </div>
             </div>
           </div>
@@ -132,7 +150,7 @@
       <!-- Master Volume -->
       <div class="slidecontainer">
             <br>
-            <div id="master-volume-text">Master Volume </div>
+            <div class="master-volume-text">Master Volume </div>
             <input type="range" min="0" max="100" value="100" class="slider" id="master-volume">
         </div>
 
