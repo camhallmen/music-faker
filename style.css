@@ -127,12 +127,12 @@ header {
 .waveform-tracks {
     text-align: center;
     text-decoration: underline;
-    width: 40%;
+    width: 45%;
     margin-top: 10px;
     display: inline-block;
 }
 
-.mute-btn {
+#lead-mute-btn {
     background-color: red;
     border: none;
     border-radius: 8px;
@@ -141,7 +141,33 @@ header {
     opacity: 0.7;
 }
 
-.mute-btn:hover {
+#lead-mute-btn:hover {
+    opacity: 1;
+}
+
+#rhythm-mute-btn {
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}
+
+#rhythm-mute-btn:hover {
+    opacity: 1;
+}
+
+#drums-mute-btn {
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}
+
+#drums-mute-btn:hover {
     opacity: 1;
 }
 
@@ -171,11 +197,6 @@ header {
     padding: 3px;
     border-radius: 8px;
 }
-
-/* Wave Forms */
-/* .lead-tracks {
-    display: inline-block;
-} */
 
 .jumbotron {
     min-height: 650px;

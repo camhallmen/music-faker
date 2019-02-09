@@ -47,7 +47,14 @@ $("#poppunklead1").on("click", function() {
 })
 
 $("#poppunklead2").on("click", function() {
-    leadSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunklead2.mp3?alt=media&token=ce9dede6-5f64-49c6-8549-125fea2fdd62")
+    var choice = prompt("Section 1 or 2?")
+    if (choice === "1") {
+        leadSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunklead2.mp3?alt=media&token=ce9dede6-5f64-49c6-8549-125fea2fdd62")
+    } else if (choice === "2") {
+        leadSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunklead2.mp3?alt=media&token=ce9dede6-5f64-49c6-8549-125fea2fdd62")
+    } else {
+        alert("Please select a valid section!")
+    }
 })
 
 $("#poppunkrhythm1").on("click", function() {
@@ -62,8 +69,16 @@ $("#poppunkrhythm1").on("click", function() {
 })
 
 $("#poppunkrhythm2").on("click", function() {
-    rhythmSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunkrhythm2.mp3?alt=media&token=602561d6-ff66-440c-b05c-0c768f7fdc10")
+    var choice = prompt("Section 1 or 2?")
+    if (choice === "1") {
+        rhythmSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunkrhythm2.mp3?alt=media&token=602561d6-ff66-440c-b05c-0c768f7fdc10")
+    } else if (choice === "2") {
+        rhythmSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunkrhythm2.mp3?alt=media&token=602561d6-ff66-440c-b05c-0c768f7fdc10")
+    } else {
+        alert("Please select a valid section!")
+    }
 })
+
 
 $("#poppunkdrums1").on("click", function() {
     var choice = prompt("Section 1 or 2?")
@@ -77,7 +92,14 @@ $("#poppunkdrums1").on("click", function() {
 })
 
 $("#poppunkdrums2").on("click", function() {
-    drumSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunkdrums2.mp3?alt=media&token=3b2041d2-1ab7-4208-821e-8f323d9b3e31")
+    var choice = prompt("Section 1 or 2?")
+    if (choice === "1") {
+        drumSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunkdrums2.mp3?alt=media&token=3b2041d2-1ab7-4208-821e-8f323d9b3e31")
+    } else if (choice === "2") {
+        drumSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/poppunkdrums2.mp3?alt=media&token=3b2041d2-1ab7-4208-821e-8f323d9b3e31")
+    } else {
+        alert("Please select a valid section!")
+    }
 })
 
 // Button Functions
@@ -85,7 +107,6 @@ $("#poppunkdrums2").on("click", function() {
 // Play
 $("#play").on("click", function() {
     leadSurfer.playPause()
-    // leadSurferTwo.playPause()
     rhythmSurfer.playPause()
     drumSurfer.playPause()
 
@@ -104,18 +125,37 @@ drumSurfer.on("finish", function() {
     drumSurferTwo.play()
 })
 
+// Loop
+leadSurferTwo.on("finish", function() {
+    leadSurfer.play()
+})
+
+rhythmSurferTwo.on("finish", function() {
+    rhythmSurfer.play()
+})
+
+drumSurferTwo.on("finish", function() {
+    drumSurfer.play()
+})
+
 // Fast Forward
 $("#fast-forward").on("click", function() {
     leadSurfer.skipForward()
+    leadSurferTwo.skipForward()
     rhythmSurfer.skipForward()
+    rhythmSurferTwo.skipForward()
     drumSurfer.skipForward()
+    drumSurferTwo.skipForward()
 })
 
 // Rewind
 $("#rewind").on("click", function() {
     leadSurfer.skipBackward()
+    leadSurferTwo.skipBackward()
     rhythmSurfer.skipBackward()
+    rhythmSurferTwo.skipBackward()
     drumSurfer.skipBackward()
+    drumSurferTwo.skipBackward()
 })
 
 // Set song volume
@@ -125,9 +165,9 @@ $("#master-volume").on("change", function() {
     leadSurfer.setVolume(newVolume)
     leadSurferTwo.setVolume(newVolume)
     rhythmSurfer.setVolume(newVolume)
-    // rhythmSurferTwo.setVolume(newVolume)
+    rhythmSurferTwo.setVolume(newVolume)
     drumSurfer.setVolume(newVolume)
-    // drumSurferTwo.setVolume(newVolume)
+    drumSurferTwo.setVolume(newVolume)
 })
 
 // Set individual track volume
@@ -142,41 +182,61 @@ $("#rhythm-volume").on("change", function() {
     var rangeValue = $("#rhythm-volume").val()
     newVolume = rangeValue/100
     rhythmSurfer.setVolume(newVolume)
-    // leadSurferTwo.setVolume(newVolume)
+    rhythmSurferTwo.setVolume(newVolume)
 })
 
 $("#drums-volume").on("change", function() {
     var rangeValue = $("#drums-volume").val()
     newVolume = rangeValue/100
     drumSurfer.setVolume(newVolume)
-    // leadSurferTwo.setVolume(newVolume)
+    drumSurferTwo.setVolume(newVolume)
 })
 
 // Mute individual tracks
-$("#mute-lead").on("click", function() {
+$("#lead-mute-btn").on("click", function() {
     leadSurfer.toggleMute()
     leadSurferTwo.toggleMute()
+    if (leadSurfer.getMute() === true) {
+        $("#lead-mute-btn").css("opacity", "1") 
+    } else {
+        $("#lead-mute-btn").css("opacity", "0.7")
+    }
 })
 
-$("#mute-rhythm").on("click", function() {
+$("#rhythm-mute-btn").on("click", function() {
     rhythmSurfer.toggleMute()
+    rhythmSurferTwo.toggleMute()
+    if (rhythmSurfer.getMute() === true) {
+        $("#rhythm-mute-btn").css("opacity", "1") 
+    } else {
+        $("#rhythm-mute-btn").css("opacity", "0.7")
+    }
 })
 
-$("#mute-drums").on("click", function() {
+$("#drums-mute-btn").on("click", function() {
     drumSurfer.toggleMute()
+    drumSurferTwo.toggleMute()
+    if (drumSurfer.getMute() === true) {
+        $("#drums-mute-btn").css("opacity", "1") 
+    } else {
+        $("#drums-mute-btn").css("opacity", "0.7")
+    }
 })
 
 // Delete individual tracks
 $("#delete-lead").on("click", function() {
     leadSurfer.empty()
+    leadSurferTwo.empty()
 })
 
 $("#delete-rhythm").on("click", function() {
     rhythmSurfer.empty()
+    rhythmSurferTwo.empty()
 })
 
 $("#delete-drums").on("click", function() {
     drumSurfer.empty()
+    drumSurferTwo.empty()
 })
 
 // Choose wave color
@@ -184,6 +244,9 @@ $("#choose-color").on("click", function() {
     var waveColor = $("#wave-color").val()
     console.log(waveColor)
     leadSurfer.setWaveColor(waveColor)
+    leadSurferTwo.setWaveColor(waveColor)
     rhythmSurfer.setWaveColor(waveColor)
+    rhythmSurferTwo.setWaveColor(waveColor)
     drumSurfer.setWaveColor(waveColor)
+    drumSurferTwo.setWaveColor(waveColor)
 })
