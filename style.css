@@ -94,6 +94,72 @@ header {
     opacity: 1;
 }
 
+#play-section-one {
+    font-family: 'Stardos Stencil', cursive;
+    margin-right: 10px;
+    background-color: grey;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}
+
+#play-section-one:hover {
+    opacity: 1;
+}
+
+#play-section-two {
+    font-family: 'Stardos Stencil', cursive;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: grey;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}
+
+#play-section-two:hover {
+    opacity: 1;
+}
+
+#play-section-three {
+    font-family: 'Stardos Stencil', cursive;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: grey;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}
+
+#play-section-three:hover {
+    opacity: 1;
+}
+
+#play-section-four {
+    font-family: 'Stardos Stencil', cursive;
+    margin-left: 10px;
+    background-color: grey;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}
+
+#play-section-four:hover {
+    opacity: 1;
+}
+
+.center-btn {
+    text-align: center;
+}
+
 #controls {
     width: 75%;
 }

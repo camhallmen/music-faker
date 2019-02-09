@@ -110,9 +110,21 @@ $("#play").on("click", function() {
     leadSurfer.playPause()
     rhythmSurfer.playPause()
     drumSurfer.playPause()
-
 })
 
+$("#play-section-one").on("click", function() {
+    leadSurfer.playPause()
+    rhythmSurfer.playPause()
+    drumSurfer.playPause()
+})
+
+$("#play-section-two").on("click", function() {
+    leadSurferTwo.playPause()
+    rhythmSurferTwo.playPause()
+    drumSurferTwo.playPause()
+})
+
+// Auto Play
 // Play Section Two
 leadSurfer.on("finish", function() {
     leadSurferTwo.play()
@@ -242,6 +254,9 @@ $("#delete-drums").on("click", function() {
 
 // Choose wave color
 $("#choose-color").on("click", function() {
+    // if (e.keyCode == 13) {
+    //     event.preventDefault()
+    // } else {
     var waveColor = $("#wave-color").val()
     console.log(waveColor)
     leadSurfer.setWaveColor(waveColor)
@@ -250,4 +265,5 @@ $("#choose-color").on("click", function() {
     rhythmSurferTwo.setWaveColor(waveColor)
     drumSurfer.setWaveColor(waveColor)
     drumSurferTwo.setWaveColor(waveColor)
+    // }
 })
