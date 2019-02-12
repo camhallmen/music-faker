@@ -20,7 +20,7 @@ header {
 }
 
 .jumbotron {
-    background-color: white;
+    background-color: lightgrey;
     height: 70vh;
     margin-bottom: 10px;
     border-style: solid;
@@ -34,6 +34,32 @@ header {
     border-style: solid;
     border-width: 1px;
     border-color: black;*/
+}
+
+#about {
+    float: right;
+    margin-right: 60px;
+    font-size: 24px;
+}
+
+#credits {
+    float: right;
+    margin-right: 60px;
+    font-size: 24px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: grey !important;
+    text-shadow: 2px 2px 5px grey;
+    text-decoration: none;
+}
+
+.center-waves {
+    text-align: center;
 }
 
 .column-hdr {

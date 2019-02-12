@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link rel="icon" type="img/png" href="images/new-treble-clef.png">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+    <link rel="icon" type="img/png" href="./images/new-treble-clef.png">
     <title>Music Faker</title>
 </head>
 <body>
@@ -36,6 +36,8 @@
           </div>
           <div class="col-10" id="column2">
             <strong>&#119070; Music Faker</strong>
+            <div id="credits"><a href="credits.html">Credits</a></div> 
+            <div id="about"><a href="about.html">About</a></div>
           </div>
         </div>
         </div>
@@ -55,7 +57,9 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a id="poppunklead1" class="dropdown-item" href="#">Pop-Punk Lead One</a>
                 <a id="poppunklead2" class="dropdown-item" href="#">Pop-Punk Lead Two</a>
-                <a class="dropdown-item" href="#">Track 3</a>
+                <a id="blueslead1" class="dropdown-item" href="#">Blues Lead One</a>
+                <a id="bluesshred" class="dropdown-item" href="#">Blues Shred</a>
+                <a id="rocklead1" class="dropdown-item" href="#">Rock Lead One</a>
               </div>
               </div>
               <div class="dropdown">
@@ -65,7 +69,11 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a id="poppunkrhythm1" class="dropdown-item" href="#">Pop-Punk Rhythm One</a>
                 <a id="poppunkrhythm2" class="dropdown-item" href="#">Pop-Punk Rhythm Two</a>
-                <a class="dropdown-item" href="#">Track 3</a>
+                <a id="djentbreakdown1" class="dropdown-item" href="#" data-name="Djent Rhythm One">Djent Rhythm One</a>
+                <a id="djentbreakdown2" class="dropdown-item" href="#">Djent Rhythm Two</a>
+                <a id="bluesrhythm1" class="dropdown-item" href="#">Blues Rhythm One</a>
+                <a id="bluesrhythm2" class="dropdown-item" href="#">Blues Rhythm Two</a>
+                <a id="rockrhythm1" class="dropdown-item" href="#">Rock Rhythm One</a>
               </div>
               </div>
               <div class="dropdown">
@@ -85,7 +93,11 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a id="poppunkdrums1" class="dropdown-item" href="#">Pop-Punk Drums One</a>
                 <a id="poppunkdrums2" class="dropdown-item" href="#">Pop-Punk Drums Two</a>
-                <a class="dropdown-item" href="#">Track 3</a>
+                <a id="djentdrums1" class="dropdown-item" href="#">Djent Drums One</a>
+                <a id="djentdrums2" class="dropdown-item" href="#">Djent Drums Two</a>
+                <a id="bluesdrums1" class="dropdown-item" href="#">Blues Drums One</a>
+                <a id="bluesdrums2" class="dropdown-item" href="#">Blues Drums Two</a>
+                <a id="rockdrums1" class="dropdown-item" href="#">Rock Drums One</a>
               </div>
               </div>
               <div class="dropdown">
@@ -111,13 +123,14 @@
               </div>
             </div>
             <div class="col-8">
-              <div class="jumbotron container-fluid">
+              <div class="jumbotron container-fluid center-waves">
                   <!-- Wavesurfer -->
               <div id="lead-form" class="waveform-tracks lead-tracks">Lead One</div>
               <div id="lead-form2" class="waveform-tracks lead-tracks">Lead Two</div>
               <div id="lead-form3" class="waveform-tracks">Lead Three</div>
               <div id="lead-form4" class="waveform-tracks">Lead Four</div>
               <div id="rhythm-form" class="waveform-tracks">Rhythm One</div>
+              <!-- <div id="name-goes-here"></div> -->
               <div id="rhythm-form2" class="waveform-tracks">Rhythm Two</div>
               <div id="rhythm-form3" class="waveform-tracks">Rhythm Three</div>
               <div id="rhythm-form4" class="waveform-tracks">Rhythm Four</div>
@@ -271,7 +284,7 @@
       <script src="https://unpkg.com/wavesurfer.js"></script>
 
       <!-- Link to my js -->
-      <script src="javascripts/index.js"></script>
+      <script src="./javascripts/index.js"></script>
 
 </body>
 </html>
