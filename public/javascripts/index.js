@@ -340,6 +340,118 @@ $("#bluesrhythm1").on("click", function() {
     }
 })
 
+$("#poppunkbass1").on("click", function() {
+    var choice = prompt("Please choose section 1 2 3 or 4")
+    if (choice === "1") {
+        bassSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Pop-Punk%20Bass%201.mp3?alt=media&token=ba3b78de-db34-4ddb-97a9-2e324fd1692b")
+    } else if (choice === "2") {
+        bassSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Pop-Punk%20Bass%201.mp3?alt=media&token=ba3b78de-db34-4ddb-97a9-2e324fd1692b")
+    } else if (choice === "3") {
+        bassSurferThree.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Pop-Punk%20Bass%201.mp3?alt=media&token=ba3b78de-db34-4ddb-97a9-2e324fd1692b")
+    } else if (choice === "4") {
+        bassSurferFour.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Pop-Punk%20Bass%201.mp3?alt=media&token=ba3b78de-db34-4ddb-97a9-2e324fd1692b")
+    }
+     else {
+        alert("Please choose a valid section!")
+    }
+})
+
+$("#poppunkbass2").on("click", function() {
+    var choice = prompt("Please choose section 1 2 3 or 4")
+    if (choice === "1") {
+        bassSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Pop-Punk%20Bass%202.mp3?alt=media&token=1c165b30-e9cd-4197-a8de-05f16ffd61bf")
+    } else if (choice === "2") {
+        bassSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Pop-Punk%20Bass%202.mp3?alt=media&token=1c165b30-e9cd-4197-a8de-05f16ffd61bf")
+    } else if (choice === "3") {
+        bassSurferThree.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Pop-Punk%20Bass%202.mp3?alt=media&token=1c165b30-e9cd-4197-a8de-05f16ffd61bf")
+    } else if (choice === "4") {
+        bassSurferFour.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Pop-Punk%20Bass%202.mp3?alt=media&token=1c165b30-e9cd-4197-a8de-05f16ffd61bf")
+    }
+     else {
+        alert("Please choose a valid section!")
+    }
+})
+
+$("#djentbass1").on("click", function() {
+    var choice = prompt("Please choose section 1 2 3 or 4")
+    if (choice === "1") {
+        bassSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Djent%20Bass%201.mp3?alt=media&token=19d49c1c-1570-4cab-b45e-a79da1b192de")
+    } else if (choice === "2") {
+        bassSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Djent%20Bass%201.mp3?alt=media&token=19d49c1c-1570-4cab-b45e-a79da1b192de")
+    } else if (choice === "3") {
+        bassSurferThree.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Djent%20Bass%201.mp3?alt=media&token=19d49c1c-1570-4cab-b45e-a79da1b192de")
+    } else if (choice === "4") {
+        bassSurferFour.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Djent%20Bass%201.mp3?alt=media&token=19d49c1c-1570-4cab-b45e-a79da1b192de")
+    }
+     else {
+        alert("Please choose a valid section!")
+    }
+})
+
+$("#djentbass2").on("click", function() {
+    var choice = prompt("Please choose section 1 2 3 or 4")
+    if (choice === "1") {
+        bassSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Djent%20Bass%202.mp3?alt=media&token=30b4e133-ead9-4bcb-a33d-9464b0a7bf73")
+    } else if (choice === "2") {
+        bassSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Djent%20Bass%202.mp3?alt=media&token=30b4e133-ead9-4bcb-a33d-9464b0a7bf73")
+    } else if (choice === "3") {
+        bassSurferThree.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Djent%20Bass%202.mp3?alt=media&token=30b4e133-ead9-4bcb-a33d-9464b0a7bf73")
+    } else if (choice === "4") {
+        bassSurferFour.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Djent%20Bass%202.mp3?alt=media&token=30b4e133-ead9-4bcb-a33d-9464b0a7bf73")
+    }
+     else {
+        alert("Please choose a valid section!")
+    }
+})
+
+$("#bluesbass1").on("click", function() {
+    var choice = prompt("Please choose section 1 2 3 or 4")
+    if (choice === "1") {
+        bassSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Blues%20Bass%201.mp3?alt=media&token=d2246938-b190-48e5-a42f-75974cf5930a")
+    } else if (choice === "2") {
+        bassSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Blues%20Bass%201.mp3?alt=media&token=d2246938-b190-48e5-a42f-75974cf5930a")
+    } else if (choice === "3") {
+        bassSurferThree.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Blues%20Bass%201.mp3?alt=media&token=d2246938-b190-48e5-a42f-75974cf5930a")
+    } else if (choice === "4") {
+        bassSurferFour.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Blues%20Bass%201.mp3?alt=media&token=d2246938-b190-48e5-a42f-75974cf5930a")
+    }
+     else {
+        alert("Please choose a valid section!")
+    }
+})
+
+$("#bluesbass2").on("click", function() {
+    var choice = prompt("Please choose section 1 2 3 or 4")
+    if (choice === "1") {
+        bassSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Blues%20Bass%202.mp3?alt=media&token=2076e30e-07b3-48a3-beac-b94b39f2c1fa")
+    } else if (choice === "2") {
+        bassSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Blues%20Bass%202.mp3?alt=media&token=2076e30e-07b3-48a3-beac-b94b39f2c1fa")
+    } else if (choice === "3") {
+        bassSurferThree.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Blues%20Bass%202.mp3?alt=media&token=2076e30e-07b3-48a3-beac-b94b39f2c1fa")
+    } else if (choice === "4") {
+        bassSurferFour.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Blues%20Bass%202.mp3?alt=media&token=2076e30e-07b3-48a3-beac-b94b39f2c1fa")
+    }
+     else {
+        alert("Please choose a valid section!")
+    }
+})
+
+$("#rockbass1").on("click", function() {
+    var choice = prompt("Please choose section 1 2 3 or 4")
+    if (choice === "1") {
+        bassSurfer.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Rock%20Bass%201.mp3?alt=media&token=6cd08150-b143-4a2b-abcb-7b49bf051a9d")
+    } else if (choice === "2") {
+        bassSurferTwo.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Rock%20Bass%201.mp3?alt=media&token=6cd08150-b143-4a2b-abcb-7b49bf051a9d")
+    } else if (choice === "3") {
+        bassSurferThree.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Rock%20Bass%201.mp3?alt=media&token=6cd08150-b143-4a2b-abcb-7b49bf051a9d")
+    } else if (choice === "4") {
+        bassSurferFour.load("https://firebasestorage.googleapis.com/v0/b/mf-test-bafa6.appspot.com/o/mf%20-%20Rock%20Bass%201.mp3?alt=media&token=6cd08150-b143-4a2b-abcb-7b49bf051a9d")
+    }
+     else {
+        alert("Please choose a valid section!")
+    }
+})
+
 $("#bluesrhythm2").on("click", function() {
     var choice = prompt("Please choose section 1 2 3 or 4")
     if (choice === "1") {
