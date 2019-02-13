@@ -6,6 +6,15 @@ header {
     color: white;
 }
 
+#mf-logo {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+}
+
+img:hover {
+    opacity: 0.7;
+}
+
 .fa {
     font-size: 48px;
 }
@@ -15,12 +24,12 @@ header {
 }
 
 #column2 {
-    background-color: blue;
+    background-color: #004ba8;
     font-size: 48px;
 }
 
 .jumbotron {
-    background-color: lightgrey;
+    background-color: #D7D9CE;
     height: 70vh;
     margin-bottom: 10px;
     border-style: solid;
@@ -39,13 +48,23 @@ header {
 #about {
     float: right;
     margin-right: 60px;
+    margin-top: 25px;
     font-size: 24px;
+}
+
+#about:hover {
+    opacity: 0.7;
 }
 
 #credits {
     float: right;
     margin-right: 60px;
+    margin-top: 25px;
     font-size: 24px;
+}
+
+#credits:hover {
+    opacity: 0.7;
 }
 
 a {
@@ -53,7 +72,7 @@ a {
 }
 
 a:hover {
-    color: grey !important;
+    color: grey;
     text-shadow: 2px 2px 5px grey;
     text-decoration: none;
 }
@@ -97,7 +116,7 @@ a:hover {
 }
 
 #column4 {
-    background-color: blue;
+    background-color: #004ba8;
     font-size: 12px;
 }
 
@@ -250,6 +269,19 @@ a:hover {
     opacity: 1 !important;
 }
 
+#bass-mute-btn {
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}
+
+#bass-mute-btn:hover {
+    opacity: 1 !important;
+}
+
 #drums-mute-btn {
     background-color: red;
     border: none;
@@ -291,5 +323,31 @@ a:hover {
 }
 
 .jumbotron {
+    min-height: 800px;
+}
+
+.about-page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-jumbotron {
+    min-height: 920px;
+}
+
+.about-section {
+    text-decoration: underline;
+}
+
+li {
+    font-size: 18px;
+}
+
+.github-links {
+    color: grey;
+    text-decoration: underline;
+}
+
+.credits-jumbotron {
     min-height: 650px;
 }
