@@ -1,19 +1,43 @@
 // Create Tracks
 var leadSurfer = WaveSurfer.create({
     container: '#lead-form',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var rhythmSurfer = WaveSurfer.create({
     container: '#rhythm-form',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
+    progressColor: 'green',
+});
+
+var bassSurfer = WaveSurfer.create({
+    container: '#bass-form',
+    waveColor: '#004ba8',
+    progressColor: 'green',
+});
+
+var bassSurferTwo = WaveSurfer.create({
+    container: '#bass-form2',
+    waveColor: '#004ba8',
+    progressColor: 'green',
+});
+
+var bassSurferThree = WaveSurfer.create({
+    container: '#bass-form3',
+    waveColor: '#004ba8',
+    progressColor: 'green',
+});
+
+var bassSurferFour = WaveSurfer.create({
+    container: '#bass-form4',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var drumSurfer = WaveSurfer.create({
     container: '#drum-form',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
@@ -72,17 +96,18 @@ var drumSurferFour = WaveSurfer.create({
 });
 
 // Arrays for dry(er) code
-sectionOne = [leadSurfer, rhythmSurfer, drumSurfer]
+sectionOne = [leadSurfer, rhythmSurfer, bassSurfer, drumSurfer]
 
-sectionTwo = [leadSurferTwo, rhythmSurferTwo, drumSurferTwo]
+sectionTwo = [leadSurferTwo, rhythmSurferTwo, bassSurferTwo, drumSurferTwo]
 
-sectionThree = [leadSurferThree, rhythmSurferThree, drumSurferThree]
+sectionThree = [leadSurferThree, rhythmSurferThree, bassSurferThree, drumSurferThree]
 
-sectionFour = [leadSurferFour, rhythmSurferFour, drumSurferFour]
+sectionFour = [leadSurferFour, rhythmSurferFour, bassSurferFour, drumSurferFour]
 
 allSections = [
     leadSurfer, leadSurferTwo, leadSurferThree, leadSurferFour, 
     rhythmSurfer, rhythmSurferTwo, rhythmSurferThree, rhythmSurferFour,
+    bassSurfer, bassSurferTwo, bassSurferThree, bassSurferFour,
     drumSurfer, drumSurferTwo, drumSurferThree, drumSurferFour
 ]
 
@@ -524,6 +549,15 @@ $("#rhythm-volume").on("change", function() {
     rhythmSurferFour.setVolume(newVolume)
 })
 
+$("#bass-volume").on("change", function() {
+    var rangeValue = $("#bass-volume").val()
+    newVolume = rangeValue/100
+    bassSurfer.setVolume(newVolume)
+    bassSurferTwo.setVolume(newVolume)
+    bassSurferThree.setVolume(newVolume)
+    bassSurferFour.setVolume(newVolume)
+})
+
 $("#drums-volume").on("change", function() {
     var rangeValue = $("#drums-volume").val()
     newVolume = rangeValue/100
@@ -561,6 +595,19 @@ $("#rhythm-mute-btn").on("click", function() {
     }
 })
 
+// Bass
+$("#bass-mute-btn").on("click", function() {
+    bassSurfer.toggleMute()
+    bassSurferTwo.toggleMute()
+    bassSurferThree.toggleMute()
+    bassSurferFour.toggleMute()
+    if (bassSurfer.getMute() === true) {
+        $("#bass-mute-btn").css("opacity", "1") 
+    } else {
+        $("#bass-mute-btn").css("opacity", "0.7")
+    }
+})
+
 // Drums
 $("#drums-mute-btn").on("click", function() {
     drumSurfer.toggleMute()
@@ -592,6 +639,14 @@ $("#delete-rhythm").on("click", function() {
     rhythmSurferFour.empty()
 })
 
+// Bass
+$("#delete-bass").on("click", function() {
+    bassSurfer.empty()
+    bassSurferTwo.empty()
+    bassSurferThree.empty()
+    bassSurferFour.empty()
+})
+
 // Drums
 $("#delete-drums").on("click", function() {
     drumSurfer.empty()
@@ -608,3 +663,4 @@ $("#choose-color").on("click", function() {
         allSections[i].setWaveColor(waveColor)
     }
 })
+// Comment for line 666! \m/
