@@ -43,55 +43,55 @@ var drumSurfer = WaveSurfer.create({
 
 var leadSurferTwo = WaveSurfer.create({
     container: '#lead-form2',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var rhythmSurferTwo = WaveSurfer.create({
     container: '#rhythm-form2',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var drumSurferTwo = WaveSurfer.create({
     container: '#drum-form2',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var leadSurferThree = WaveSurfer.create({
     container: '#lead-form3',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var rhythmSurferThree = WaveSurfer.create({
     container: '#rhythm-form3',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var drumSurferThree = WaveSurfer.create({
     container: '#drum-form3',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var leadSurferFour = WaveSurfer.create({
     container: '#lead-form4',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var rhythmSurferFour = WaveSurfer.create({
     container: '#rhythm-form4',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
 var drumSurferFour = WaveSurfer.create({
     container: '#drum-form4',
-    waveColor: 'blue',
+    waveColor: '#004ba8',
     progressColor: 'green',
 });
 
@@ -110,24 +110,6 @@ allSections = [
     bassSurfer, bassSurferTwo, bassSurferThree, bassSurferFour,
     drumSurfer, drumSurferTwo, drumSurferThree, drumSurferFour
 ]
-
-// Template -----------------------------------------------------
-// $("#").on("click", function() {
-//     var choice = prompt("Please choose section 1 2 3 or 4")
-//     if (choice === "1") {
-//         Surfer.load("")
-//     } else if (choice === "2") {
-//         SurferTwo.load("")
-//     } else if (choice === "3") {
-//         SurferThree.load("")
-//     } else if (choice === "4") {
-//         SurferFour.load("")
-//     }
-//      else {
-//         alert("Please choose a valid section!")
-//     }
-// })
-// ---------------------------------------------------------------
 
 // Load Tracks
 $("#poppunklead1").on("click", function() {
@@ -549,13 +531,30 @@ $("#rockdrums1").on("click", function() {
 })
 
 // Button Functions
-
-// Play
+// Master Play for delay fix
 $("#play").on("click", function() {
     for (var i = 0; i < sectionOne.length; i ++) {
-        sectionOne[i].playPause()
-    }
-})
+                sectionOne[i].playPause()
+            }
+    setTimeout(function() {
+      for (var i = 0; i < sectionTwo.length; i ++) {
+          sectionTwo[i].play()
+      }
+    }, 16000)
+    setTimeout(function () {
+        for (var i = 0; i < sectionThree.length; i ++) {
+            sectionThree[i].play()
+        }
+    }, 32000)
+    setTimeout(function () {
+        for (var i = 0; i < sectionFour.length; i ++) {
+            sectionFour[i].play()
+        }
+    }, 48000)
+    setTimeout(function() {
+        alert("Nice Song!")
+    }, 64000)
+  });
 
 $("#play-section-one").on("click", function() {
     for (var i = 0; i < sectionOne.length; i ++) {
@@ -580,44 +579,6 @@ $("#play-section-four").on("click", function() {
         sectionFour[i].playPause()
     }
 })
-
-// Auto Play/Loop Through Sections
-
-// Section One
-for (var i = 0; i < sectionOne.length; i ++) {
-    sectionOne[i].on("finish", function() {
-        for (var i = 0; i < sectionTwo.length; i ++) {
-            sectionTwo[i].play()
-        }
-    })
-}
-
-// Section Two
-for (var i = 0; i < sectionTwo.length; i ++) {
-    sectionTwo[i].on("finish", function() {
-        for (var i = 0; i < sectionThree.length; i ++) {
-            sectionThree[i].play()
-        }
-    })
-}
-
-// Section Three
-for (var i = 0; i < sectionThree.length; i ++) {
-    sectionThree[i].on("finish", function() {
-        for (var i = 0; i < sectionFour.length; i ++) {
-            sectionFour[i].play()
-        }
-    })
-}
-
-// Section Four
-for (var i = 0; i < sectionFour.length; i ++) {
-    sectionFour[i].on("finish", function() {
-        for (var i = 0; i < sectionOne.length; i ++) {
-            sectionOne[i].play()
-        }
-    })
-}
 
 // Fast Forward
 $("#fast-forward").on("click", function() {
@@ -775,4 +736,3 @@ $("#choose-color").on("click", function() {
         allSections[i].setWaveColor(waveColor)
     }
 })
-// Comment for line 666! \m/
