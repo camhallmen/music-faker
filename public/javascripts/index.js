@@ -531,30 +531,43 @@ $("#rockdrums1").on("click", function() {
 })
 
 // Button Functions
+
 // Master Play for delay fix
+var timerOne, timerTwo, timerThree, timerFour
 $("#play").on("click", function() {
     for (var i = 0; i < sectionOne.length; i ++) {
                 sectionOne[i].playPause()
             }
-    setTimeout(function() {
+    timerOne = setTimeout(function() {
       for (var i = 0; i < sectionTwo.length; i ++) {
           sectionTwo[i].play()
       }
     }, 16000)
-    setTimeout(function () {
+    timerTwo = setTimeout(function () {
         for (var i = 0; i < sectionThree.length; i ++) {
             sectionThree[i].play()
         }
     }, 32000)
-    setTimeout(function () {
+    timerThree = setTimeout(function () {
         for (var i = 0; i < sectionFour.length; i ++) {
             sectionFour[i].play()
         }
     }, 48000)
-    setTimeout(function() {
+    timerFour = setTimeout(function() {
         alert("Nice Song!")
     }, 64000)
   });
+
+// Master Pause
+$("#pause").on("click", function() {
+    clearTimeout(timerOne)
+    clearTimeout(timerTwo)
+    clearTimeout(timerThree)
+    clearTimeout(timerFour)
+    for (var i = 0; i < allSections.length; i ++) {
+        allSections[i].pause()
+    }
+})
 
 $("#play-section-one").on("click", function() {
     for (var i = 0; i < sectionOne.length; i ++) {
