@@ -19,7 +19,7 @@
     <header>
         <div class="container-fluid">
         <div class="row">
-          <div class="col-2" id="column1">
+          <div class="col-2 center-user" id="column1">
           <table class="table-sm table-borderless mx-auto">
             <tbody>
               <tr>
@@ -27,7 +27,7 @@
               </tr>
               <tr>
                 <td class="py-0">
-                  <strong>Avatar</strong>
+                  <div id="show-user"></div>
                 </td>
               </tr>
             </tbody>
@@ -36,6 +36,7 @@
           <div class="col-10" id="column2">
             <!-- <a href="index.html"><strong>&#119070; Music Faker</strong></a> -->
             <a href="index.html"><img src="./images/Music_Faker_Site_Verison.png" id="mf-logo" height="80px" alt="Music Faker Logo"></a>
+            <a href="#" id="logout">Logout</a>
             <div id="credits"><a href="credits.html">Credits</a></div> 
             <div id="about"><a href="about.html">About</a></div>
           </div>
@@ -77,6 +78,35 @@
         </div>
       </header>
     </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+
+    <script>
+    // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyAKwqj7NxWYPMa7uyK14T3HHC84I37uTfg",
+      authDomain: "mf-test-bafa6.firebaseapp.com",
+      databaseURL: "https://mf-test-bafa6.firebaseio.com",
+      projectId: "mf-test-bafa6",
+      storageBucket: "mf-test-bafa6.appspot.com",
+      messagingSenderId: "924961467216"
+    };
+      firebase.initializeApp(config);
+      const auth = firebase.auth()
+    </script>
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Link to my js -->
+    <script src="./javascripts/auth.js"></script>
 
 </body>
 </html>
