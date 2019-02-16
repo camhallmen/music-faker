@@ -1,0 +1,8 @@
+[
+    {
+      "origin": ["https://music-faker.herokuapp.com/home.html"],
+      "responseHeader": ["Content-Type"],
+      "method": ["GET"],
+      "maxAgeSeconds": 3600
+    }
+  ]
