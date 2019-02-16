@@ -2,7 +2,10 @@
 // DEPENDENCIES
 // We need to include the path package to get the correct file path for our html
 // ===============================================================================
-var path = require("path");
+var path = require("path")
+var express = require("express")
+var cors = require("cors")
+var app = express()
 
 // ===============================================================================
 // ROUTING
@@ -26,7 +29,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/credits.html"));
   });
 
-  app.get("/home", function(req, res) {
+  app.get("/home", cors(), function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
   
