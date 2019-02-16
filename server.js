@@ -4,6 +4,8 @@
 // ==============================================================================
 
 var express = require("express");
+var cors = require('cors')
+
 
 
 // ==============================================================================
@@ -13,6 +15,7 @@ var express = require("express");
 
 // Tells node that we are creating an "express" server
 var app = express();
+app.use(cors()) // Use this after the variable declaration
 
 // Sets an initial port. We"ll use this later in our listener
 var PORT = process.env.PORT || 8080;
